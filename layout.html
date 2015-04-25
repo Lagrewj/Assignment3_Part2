@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>CS 290 Assignment Part 2</title>
     <script src= "source.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Assignment 3 Part 2</h1>
     <h2>Created by: Jonathan Lagrew</h2>
+    <div>searchList
     <form>
       <input id="pageNum" type="number" name="pageNumInput" max="5"> This return the number of pages - 30 results per page
       <br>
@@ -17,9 +19,12 @@
       <input id="JSON" type="checkbox" name="JSON" value="JSON">JSON
       <input id="SQL" type="checkbox" name="SQL" value="SQL">SQL
       <!-- Entering in gists -->
-      <input type="button" name="Search" onclick="runSearch(https://api.github.com/gists/public')" value="Search">Search
+      <input type="button" name="Search" onclick="getSearch()">Search
       </form>
-      <div id="seearchResults"></div>
+    </div>
+      <h3>Favorites</h3>
+      <div> id="favoritesList"</div>
+      <div id="searchResults"></div>
     </body>
 </html>
       
