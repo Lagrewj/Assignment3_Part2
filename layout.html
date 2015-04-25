@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CS 290 Assignment Part 2</title>
+    <script src= "source.js"></script>
+  </head>
+  <body>
+    <h1>Assignment 3 Part 2</h1>
+    <h2>Created by: Jonathan Lagrew</h2>
+    <form>
+      <input id="pageNum" type="number" name="pageNumInput" max="5"> This return the number of pages - 30 results per page
+      <br>
+      <br>
+      <input id="JavaScript" type="checkbox" name="JavaScript" value="JavaScript">JavaScript
+      <input id="Python" type="checkbox" name="Python" value="Python">Python
+      <input id="JSON" type="checkbox" name="JSON" value="JSON">JSON
+      <input id="SQL" type="checkbox" name="SQL" value="SQL">SQL
+      <!-- Entering in gists -->
+      <input type="button" name="Search" onclick="runSearch(https://api.github.com/gists/public')" value="Search">Search
+      </form>
+      <div id="seearchResults"></div>
+    </body>
+</html>
+      
