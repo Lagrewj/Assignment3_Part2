@@ -1,0 +1,39 @@
+Start: Mon 20 Apr 2015 09:00:00 -0700
+End: Mon 20 Apr 2015 11:30:00 -0700 
+Tasks: started materials for the week and viewed assignment. Outlined functions and started research
+Start: Tue 21 Apr 2015 20:00:00 -0700
+End: Tue  21 Apr 2015 21:30:00 -0700 
+Tasks: Lectures, readings and research on JS and AJAX
+Start: Fri 24 Apr 2015 10:00:00 -0700
+End: Fri 24 Apr 2015 12:35:00 -0700 
+Tasks: Started layout.html for basic checked boxes and search button layout
+Start: Fri 24 Apr 2015 14:00:00 -0700
+End: Fri 24 Apr 2015 17:45:00 -0700 
+Tasks: Added to outline of functions for source.js. Started coding. Ran into problems with AJAX reuqests
+Start: Fri 24 Apr 2015 16:00:00 -0700
+End: Fri 24 Apr 2015 20:45:00 -0700 
+Tasks: worked on display gists function
+Start: Sat 25 Apr 2015 08:00:00 -0700
+End: Sat 25 Apr 2015 10:15:00 -0700 
+Tasks: started favorites functions and language filter
+Start: Sat 25 Apr 2015 13:00:00 -0700
+End: Sat 25 Apr 2015 21:30:00 -0700 
+Tasks: Started coding. Revamped outline of functions to include clears and helper. Ran into problems with AJAX reuqests
+Start: Sun 26 Apr 2015 07:00:00 -0700
+End: Sun 26 Apr 2015 10:45:00 -0700 
+Tasks: Added css file. Continued writing AJAX calls functions for searches. Worked out syntax errors in display functions. 
+Start: Sun 26 Apr 2015 11:00:00 -0700
+End: Sun 26 Apr 2015 12:45:00 -0700 
+Tasks: testing locally and on OSU servers. added log file from word document. 
+
+
+Tests:
+Run the search with no filtering
+Naviage to one of the results by clicking the link.
+Run the search with filtering. Make sure the appropriate subset of results is returned.
+Run it again with 5 pages requested, make sure more results are returned.
+Attempt to input 6 pages then search and see what happens, it should not allow this.
+Save some set of results to favorites.
+Refresh the page and make sure they are still there.
+Run the search again and make sure the favorited results are not displayed in the search results.
+Navigate to one of the favorited results.
