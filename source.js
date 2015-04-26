@@ -348,3 +348,4 @@ function requestGists(page)
 //known errors
 //1. had C# results returned 
 //2. html returns when js checked
+//3. return null language
