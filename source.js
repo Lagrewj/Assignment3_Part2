@@ -238,3 +238,11 @@ function displayGists(gists)
 		}
 	} 
 }
+
+//clear function to clear search results each search
+function clear()
+{	
+	var refresh = document.getElementById("searchResults");
+	refresh.innerHTML = "";
+
+}
