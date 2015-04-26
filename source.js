@@ -21,8 +21,28 @@ window.onload = function()
 function clearFavorites()
 {
 	//setting html to empty string which will clear the favorites
+	//The innerHTML property sets or returns the HTML content (inner HTML) of an element
 	document.getElementById("favoritesList").innerHTML = "";
 
+}
+
+function displayFavorites()
+{
+	//clearing favorites
+	clearFavorites();
+
+	//if local storage favorites exists then strings will get called by AJAX to query GitHub 
+	if (localStorage.getItem("favorites")) 
+	{
+		var favorite_string = localStorage.getItem("favorites");
+		//splitting by comma
+		var favorite_list = favorite_string.split(",");
+		//for loop running through favorites list length
+		for(var i =0;i<favorite_list.length;i++)			  	
+		{
+			getGist(favorite_list[i]);
+		}
+	};
 }
 
 function displayGists(gists)
