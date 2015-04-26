@@ -1,15 +1,3 @@
-//Outline of functions
-//Favorites 
-  //display
-  //add
-  //remove
-  //clear
-  //helper locatedInFavorites
-  //not duplicate
-//Filter
-//GetLanguage
-//Display Results
-//clear results
 
 //global call to refresh favorites 
 //global even handler
