@@ -2,28 +2,27 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>CS 290 Assignment Part 2</title>
     <script src= "source.js"></script>
     <link rel="stylesheet" href="style.css">
+    
+    <title>CS 290 Assignment Part 2</title>
+    
   </head>
   <body>
     <h1>Assignment 3 Part 2</h1>
     <h2>Created by: Jonathan Lagrew</h2>
-    <div>searchList
-    <form>
-      <input id="pageNum" type="number" name="pageNumInput" max="5"> This return the number of pages - 30 results per page
-      <br>
-      <br>
-      <input id="JavaScript" type="checkbox" name="JavaScript" value="JavaScript">JavaScript
-      <input id="Python" type="checkbox" name="Python" value="Python">Python
-      <input id="JSON" type="checkbox" name="JSON" value="JSON">JSON
-      <input id="SQL" type="checkbox" name="SQL" value="SQL">SQL
-      <!-- Entering in gists -->
-      <input id="search" type="button" name="Search" onclick="getSearch()">Search
-      </form>
+    <p> Selected 1-5 for pages and check desired languages, then hit Search</p>
+    <div class="searchList">
+    <label>Number of Pages: <input type="number" id="selectedPages" value="1" min="1" max="5"></label>
+    <label>Python<input type="checkbox" id="python"></label>
+    <label>JSON<input type="checkbox" id="json"></label>
+    <label>Javascript<input type="checkbox" id="javascript"></label>
+    <label>SQL<input type="checkbox" id="sql"></label>
+    <button id="main-search" onclick="searchGists()">Find Gists</button>
+  </div>
     </div>
       <h3>Favorites</h3>
-      <div> id="favoritesList"</div>
+      <div id="favoritesList"></div>
       <div id="searchResults"></div>
     </body>
 </html>
