@@ -116,6 +116,10 @@ function locatedInFavorites(gistID)
 	}
 	return false;
 }
+//starting filter functions
+function filterGist(pythonCheck, SQLCheck, JSONCheck, JSCheck)
+{
+}
 function displayGists(gists)
 {	//searchResults div 
 	var main = document.getElementById("searchResults");
