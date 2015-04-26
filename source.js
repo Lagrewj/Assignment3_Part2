@@ -176,7 +176,26 @@ function filterGist(pythonCheck, SQLCheck, JSONCheck, JSCheck)
 	}
 	return false;
 }	
+//will return language if in gist objects
+//called in displayGists function
+function getLanguage(gist)
+{
+	
+	var files = gist.files;
+	for (var chosen in files)
+	{
+		var dictionary = files[chosen];
+		for(var item in dictionary)
+		{
+			if(item == "language")
+			{
+				return dictionary.language;
+			}
+		}
+	}
+
 }
+
 function displayGists(gists)
 {	//searchResults div 
 	var main = document.getElementById("searchResults");
