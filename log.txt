@@ -24,7 +24,7 @@ End: Sun 26 Apr 2015 10:45:00 -0700
 Tasks: Added css file. Continued writing AJAX calls functions for searches. Worked out syntax errors in display functions. 
 Start: Sun 26 Apr 2015 11:00:00 -0700
 End: Sun 26 Apr 2015 12:45:00 -0700 
-Tasks: testing locally and on OSU servers. added log file from word document. 
+Tasks: testing locally and on OSU servers. added log file from word document.  
 
 
 Tests:
