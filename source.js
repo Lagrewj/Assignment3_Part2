@@ -116,9 +116,66 @@ function locatedInFavorites(gistID)
 	}
 	return false;
 }
-//starting filter functions
+//this will filter the language search results to only show checked languages
+//default is set to show all results
 function filterGist(pythonCheck, SQLCheck, JSONCheck, JSCheck)
 {
+//will go through each checked language if checked
+	var checkedLanguage = []
+	if(pythonCheck)
+	{
+		checkedLanguage.push("python");
+	}
+	if(SQLCheck)
+	{
+		checkedLanguage.push("sql");
+	}
+
+	if(JSCheck)
+	{
+		checkedLanguage.push("javascript");
+	}
+	if(JSONCheck)
+	{
+		checkedLanguage.push("json");
+	}
+
+	//default will show all results set to true 
+	if (checkedLanguage.length == 0)
+	{
+		return true;
+	}
+	//returning true if match in files
+	var files = gist.files;
+	//nested for loop
+	for (var chosen in files)
+	{
+		//comparing dictionary
+		var dictionary = files[chosen];
+		for(var item in dictionary)
+		{
+			if(item == "language")
+			{
+				//going through checked language will return true
+				gistLanguage = dictionary.language;
+				for(var i = 0; i<checkedLanguage.length;i++)
+				{	
+					if(gistLanguage != null)
+					{	
+						if(gistLanguage.toLowerCase() == checkedLanguage[i])
+						{
+							return true;
+						}
+					}
+					
+				}
+			}
+		}
+
+		
+	}
+	return false;
+}	
 }
 function displayGists(gists)
 {	//searchResults div 
