@@ -10,6 +10,13 @@
 //Display Results
 //clear results
 
+//function is the handler function to be called when the window's load event fires
+//Global Event Handler
+window.onload = function()
+{
+	displayFavorites();
+}
+
 function displayGists(gists)
 {	//searchResults div 
 	var main = document.getelemententById("searchResults");
