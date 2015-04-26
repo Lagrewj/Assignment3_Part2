@@ -4,6 +4,7 @@
   //add
   //remove
   //clear
+  //helper locatedInFavorites
   //not duplicate
 //Filter
 //GetLanguage
@@ -44,7 +45,77 @@ function displayFavorites()
 		}
 	};
 }
+//adding favorites function first check gistID list 
+//then if enough storage locally will add to string or add just ID
+function addFavorite(gistID)
+{
+	if (!locatedInFavorites(gistID))
+	{
+		//checking local storage of favorites
+		if (localStorage.getItem("favorites"))
+		{
+			var favorites = localStorage.getItem("favorites");
+			favorites = favorites+","+gistID;
+			if(!locatedInFavorites(gistID))
+			{
+				localStorage.setItem("favorites", favorites);
 
+			}
+		}
+		else
+		{
+			localStorage.setItem("favorites", gistID);
+		}
+
+		// Reconstruct the favorites list and the requested gists
+		displayFavorites();
+		getGists();
+	}
+}
+//remove will check if gistID is in favorites list and loop through
+//list by comma again and insert into local storage 
+//redisplay favorites
+function removeFavorite(favorite_gistID)
+{
+	var gistID = favorite_gistID.split("fav-")[1];
+	if(locatedInFavorites(gistID))
+	{
+		var newfavorites = []
+		var favorites = localStorage.getItem("favorites");
+		var favoriteList = favorites.split(",");
+		for(i=0;i<favoriteList.length;i++)
+		{
+			gist = favoriteList[i];
+			if(gist != gistID )
+			{
+				newfavorites.push(gist);
+			}
+		}
+		localStorage.setItem("favorites",newfavorites.join());
+		displayFavorites();
+	}
+}
+
+//this helper function will be used in add and remove favorites list to check to see if its 
+//already in favorites list by comparing IDs
+function locatedInFavorites(gistID)
+{
+	if (localStorage.getItem("favorites"))
+	{
+		var favorites = localStorage.getItem("favorites");
+		var favoriteList = favorites.split(",");
+		for(i=0;i<favoriteList.length;i++)
+		{
+			gist = favoriteList[i];
+			if(gist == gistID )
+			{
+				return true
+			}
+		}
+		return false;
+	}
+	return false;
+}
 function displayGists(gists)
 {	//searchResults div 
 	var main = document.getElementById("searchResults");
