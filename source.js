@@ -17,15 +17,23 @@ window.onload = function()
 	displayFavorites();
 }
 
+//clear favorites function will clear all favorites with empty string
+function clearFavorites()
+{
+	//setting html to empty string which will clear the favorites
+	document.getElementById("favoritesList").innerHTML = "";
+
+}
+
 function displayGists(gists)
 {	//searchResults div 
-	var main = document.getelemententById("searchResults");
+	var main = document.getElementById("searchResults");
 
 	//the 4 requested languages from the checked boxes
-	var python = document.getelemententById("python").checked;
-	var json = document.getelemententById("json").checked;
-	var javascript = document.getelemententById("javascript").checked;
-	var sql = document.getelemententById("sql").checked;	
+	var python = document.getElementById("python").checked;
+	var json = document.getElementById("json").checked;
+	var javascript = document.getElementById("javascript").checked;
+	var sql = document.getElementById("sql").checked;	
 	
 	//getting description from gist
 	//getting ID from gist
@@ -51,7 +59,7 @@ function displayGists(gists)
 			//adding favorites button on click
 			var button =  '<button id="'+gistID+'" onclick="addFavorite(this.id)">Add to Favorites</button>';
 			var gisthtml = "<div class='gist-item'>" + id + description + language + button +"<br></div>";	
-			var element = document.createelementent("div");
+			var element = document.creatElement("div");
 			element.id = "div-"+gistID;
 			element.innerHTML = gisthtml;
 			//method to add node to end of list of children 
